@@ -13,7 +13,7 @@ public class Program {
     public static void main(String[] args) {
         int len = 4;
         int[] array1 = {2, 4, 5, 8};
-        int[] array2 = {2, 1, 2, 1, 3};
+        int[] array2 = {2, 1, 2, 1, 8};
         treatExceptionOnLength(array1, array2);
         buildArray3(array1, array2);
         printArray(buildArray3(array1, array2));
@@ -32,8 +32,9 @@ public class Program {
 
     public static void treatExceptionOnLength (int[] array1, int[] array2){
             if (array1.length != array2.length) {
-                System.out.println("RuntimeException: Длины массивов не равны - Скорректируйте");
-                System.exit(0);
+//                System.out.println("RuntimeException: Длины массивов не равны - Скорректируйте");
+                throw new RuntimeException("Arrays not equals");
+//                System.exit(0);
             }
         }
     }
